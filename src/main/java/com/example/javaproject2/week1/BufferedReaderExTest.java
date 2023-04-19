@@ -6,6 +6,6 @@ public class BufferedReaderExTest
 {
     public static void main(String[] args) throws IOException {
         BufferedReadeEx bufferedReadeEx = new BufferedReadeEx();
-        bufferedReadeEx.readALine();
+        bufferedReadeEx.plusTwoNumbers();
     }
 }
