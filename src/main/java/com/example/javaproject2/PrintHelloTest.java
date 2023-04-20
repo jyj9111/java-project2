@@ -1,6 +1,6 @@
 package com.example.javaproject2;
 
-import java.util.Scanner;
+import com.example.javaproject2.PrintHello;
 
 public class PrintHelloTest {
     public static void main(String[] args) {
