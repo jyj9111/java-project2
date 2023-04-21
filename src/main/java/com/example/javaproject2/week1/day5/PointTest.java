@@ -11,9 +11,11 @@ public class PointTest {
 
         //다른 점 찍기
         Point p2 = new Point();
-        p2.x = 2;
-        p2.y = 3;
+        p2.x = 3;
+        p2.y = 4;
         System.out.printf("x:%d, y:%d\n", p2.x,p2.y);
         System.out.printf("x와 y가 같은지? %s\n",p2.isSameXy());
+
+        System.out.printf("두점 사이의 거리: %f\n",p2.getDistance(p1));
     }
 }
