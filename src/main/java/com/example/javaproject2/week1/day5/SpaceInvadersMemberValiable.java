@@ -5,11 +5,9 @@ public class SpaceInvadersMemberValiable {
 
     public void moveLeft(){
         location = location - 1;
-        System.out.printf("moveLeft: %d\n",location);
     }
     public void moveRight(){
         location = location + 1;
-        System.out.printf("moveRight: %d\n",location);
     }
 
     public static void main(String[] args) {
@@ -18,5 +16,9 @@ public class SpaceInvadersMemberValiable {
         sim.moveRight();
         sim.moveRight();
         sim.moveRight();
+
+        System.out.printf("최종위치 : %d\n",sim.location);
+        sim.moveLeft();
+        System.out.printf("최종위치 : %d\n",sim.location);
     }
 }
