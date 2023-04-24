@@ -3,7 +3,6 @@ package com.example.javaproject2.week2.day1;
 public class FloatDigit {
     public static void main(String[] args) {
 
-
         float f5 = 1.23e5f;
         float f6 = 1.23e6f;
         float f7 = 1.23e7f;
@@ -21,6 +20,5 @@ public class FloatDigit {
         //float는 소수 8번째 자리에서 반올림하여 소수 7번째 자리까지 출력
         float f1 = 3.141592653589793f;
         System.out.println(f1);
-
     }
 }
