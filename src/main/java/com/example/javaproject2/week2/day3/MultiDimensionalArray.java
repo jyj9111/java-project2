@@ -14,16 +14,10 @@ public class MultiDimensionalArray {
         System.out.println(Arrays.toString(arr3by3[2]));
 
         int[][] arr10by10 = new int[10][10]; // 배열 선언과 초기화
-        System.out.println(Arrays.toString(arr10by10[0]));
-        System.out.println(Arrays.toString(arr10by10[1]));
-        System.out.println(Arrays.toString(arr10by10[2]));
-        System.out.println(Arrays.toString(arr10by10[3]));
-        System.out.println(Arrays.toString(arr10by10[4]));
-        System.out.println(Arrays.toString(arr10by10[5]));
-        System.out.println(Arrays.toString(arr10by10[6]));
-        System.out.println(Arrays.toString(arr10by10[7]));
-        System.out.println(Arrays.toString(arr10by10[8]));
-        System.out.println(Arrays.toString(arr10by10[9]));
+
+        for (int i = 0 ; i < 10 ; i++){
+            System.out.println(Arrays.toString(arr10by10[i]));
+        }
 
     }
 }
