@@ -1,4 +1,4 @@
-package com.example.javaproject2.week2.day5;
+package com.example.javaproject2.codingTest;
 
 public class ColatzConjecture {
     public static int solution(int num) {
