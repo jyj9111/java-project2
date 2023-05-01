@@ -1,8 +1,8 @@
-package com.example.javaproject2.codeup;
+package com.example.javaproject2.codeup.to1080;
 
 import java.util.Scanner;
 
-public class Codeup1073 {
+public class Codeup1071 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int num = sc.nextInt();
