@@ -1,4 +1,4 @@
-package com.example.javaproject2.codeup.to1100;
+package com.example.javaproject2.codeup.to1110;
 
 public class Codeup1106 {
     public static void main(String[] args) {
