@@ -8,8 +8,7 @@ public class Codeup1094 {
         int num = sc.nextInt();
         int[] arr = new int[num];
         for (int i = 0; i < num ; i++) {
-            int input = sc.nextInt();
-            arr[i] = input;
+            arr[i] = sc.nextInt();
         }
         for (int i = num - 1; i >= 0 ; i--) {
             System.out.print(arr[i] + " ");
