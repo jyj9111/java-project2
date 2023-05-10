@@ -7,7 +7,7 @@ import java.util.Arrays;
 
 public class FileOutputDiamond {
     public void fileOutputShape(String[] result, String fileName) throws IOException {
-        File file =  new File(fileName);
+        File file =  new File(fileName + ".txt");
         FileWriter fw = new FileWriter(file);
 
         for (int i = 0; i < result.length; i++) {
@@ -24,11 +24,11 @@ public class FileOutputDiamond {
         return result;
     }
 
-    public static String getRepeatSymbol(String symbol, int num) {
+    public String getRepeatSymbol(String symbol, int num) {
         return symbol.repeat(num);
     }
 
-    public static String makeALine(int height, int i) {
+    public String makeALine(int height, int i) {
         int pivot = height / 2;
 
         if(i <= pivot) {
@@ -38,8 +38,8 @@ public class FileOutputDiamond {
         }
     }
     public static void main(String[] args) throws IOException {
-        int height = 9;
-        String fileName = "diamond3";
+        int height = 7;
+        String fileName = "diamond4";
         FileOutputDiamond fileOutputDiamond = new FileOutputDiamond();
         fileOutputDiamond.fileOutputShape(fileOutputDiamond.shapeLines(height), fileName);
     }
