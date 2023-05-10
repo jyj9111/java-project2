@@ -6,8 +6,8 @@ import java.io.IOException;
 import java.util.Arrays;
 
 public class FileOutputDiamond {
-    public void fileOutputShape(String[] result) throws IOException {
-        File file =  new File("diamond2.txt");
+    public void fileOutputShape(String[] result, String fileName) throws IOException {
+        File file =  new File(fileName);
         FileWriter fw = new FileWriter(file);
 
         for (int i = 0; i < result.length; i++) {
@@ -39,7 +39,8 @@ public class FileOutputDiamond {
     }
     public static void main(String[] args) throws IOException {
         int height = 9;
+        String fileName = "diamond3";
         FileOutputDiamond fileOutputDiamond = new FileOutputDiamond();
-        fileOutputDiamond.fileOutputShape(fileOutputDiamond.shapeLines(height));
+        fileOutputDiamond.fileOutputShape(fileOutputDiamond.shapeLines(height), fileName);
     }
 }
