@@ -9,50 +9,43 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         Stack<Integer> stack = new Stack<>();
-        Stack<Integer> saveStack = new Stack<>();
-        //입력 1
-        int num = Integer.parseInt(br.readLine());
-        int idx = num; //탑 번호확인을 위한
-        int[] tower = new  int[num + 1];
+        Stack<Integer> cloneStack;
 
-        //입력 2
-        String[] temp = (br.readLine().split(" "));
-        for (int i = 0; i < temp.length; i++) {
-            stack.push(Integer.parseInt(temp[i]));
+        int num = Integer.parseInt(br.readLine());
+
+        for (int i = 0; i < num; i++) {
+            stack.push(Integer.parseInt(br.readLine()));
         }
-        // 처리
-        boolean isSave = false;
-        // 첫번째 탑 호출
-        int preNum = stack.pop();
-        idx--;
+        int count = 0;
+        int current = 0;
+        int next = 0;
+        int previous = 0;
 
         while (!stack.isEmpty()) {
-           int crnNum = stack.pop();
-           if(isSave) {
-               int tempNum = saveStack.pop();
-               if(crnNum > tempNum) {
-                   tower[saveStack.pop()] = idx;
-                   if(saveStack.empty()) isSave = false;
-               } else {
-                   saveStack.push(tempNum);
-               }
-           }
-            if(crnNum > preNum) {
-                tower[idx] = idx--;
-                preNum = crnNum;
+            cloneStack = (Stack<Integer>) stack.clone();
+
+            current = cloneStack.pop(); // 비교할 숫자 pop
+            if(current < cloneStack.peek()) { // 바로 옆사람 밖에 못본다
+                count++;
+                previous = current;
+            } else {
+                int size = cloneStack.size();
+                for (int i = 0; i < size; i++) {
+                    int temp = cloneStack.pop();
+
+                    if(!cloneStack.isEmpty() && temp > cloneStack.peek()) {
+                        count++;
+                        break;
+                    } else count++;
+                }
             }
-            else {
-               saveStack.push(idx);
-               saveStack.push(preNum);
-               preNum = crnNum;
-               idx--;
-               isSave = true;
-           }
+            /*if(!cloneStack.isEmpty())*/
+            stack = (Stack<Integer>) cloneStack.clone();
         }
-        for (int i = 0; i < num; i++) {
-            bw.write(tower[i] + " ");
-        }
+        bw.append(Integer.toString(count));
         bw.flush();
+
+        br.close();
         bw.close();
     }
 }
