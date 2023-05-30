@@ -2,7 +2,14 @@ package com.example.javaproject2.week7;
 
 public class Game369 {
     public static void main(String[] args) {
-        game369(0, 99);
+//        game369(0, 99);
+        game369Ex();
+    }
+
+    private static void game369Ex() {
+        int cnt = 333;
+        String result = is369(cnt);
+        System.out.println(cnt + result);
     }
 
     public static void game369(int st , int range) {
