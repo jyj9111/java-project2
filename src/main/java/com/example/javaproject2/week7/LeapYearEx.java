@@ -2,14 +2,21 @@ package com.example.javaproject2.week7;
 
 public class LeapYearEx {
     public static void main(String[] args) {
-        checkLeapYear();
+        int i = 1700;
+        if(checkLeapYear(i))
+            System.out.println(i + " O");
+        else
+            System.out.println(i + " X");
     }
 
-    private static void checkLeapYear() {
-        int year =2020;
-        if((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0))
-            System.out.println(year + " O");
-        else
-            System.out.println(year + " X");
+    public static boolean checkLeapYear(int year) {
+        return ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0));
+    }
+
+    public static boolean isLeapYear(int year) {
+        if (year % 400 == 0) return true;
+        if (year % 100 == 0) return false;
+        if (year % 4 == 0) return true;
+        return false;
     }
 }
