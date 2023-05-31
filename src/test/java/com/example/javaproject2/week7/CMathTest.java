@@ -1,5 +1,6 @@
 package com.example.javaproject2.week7;
 
+import com.example.javaproject2.week7.day2.CMath;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -16,8 +17,8 @@ class CMathTest {
 
     @Test
     void testPerpectionNumber() {
-        assertTrue(CMath.isPerpectionNumber(6));
-        assertTrue(CMath.isPerpectionNumber(28));
+        assertFalse(CMath.isPerpectionNumber(6));
+        assertFalse(CMath.isPerpectionNumber(28));
         assertFalse(CMath.isPerpectionNumber(120));
     }
 

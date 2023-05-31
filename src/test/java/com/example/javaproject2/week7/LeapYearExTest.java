@@ -1,5 +1,6 @@
 package com.example.javaproject2.week7;
 
+import com.example.javaproject2.week7.day2.LeapYearEx;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
